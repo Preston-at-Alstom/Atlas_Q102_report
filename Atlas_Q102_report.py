@@ -2,10 +2,9 @@ import backend
 import streamlit as st
 
                    
-
-# downloaded_file = 'Atlas - L102 - Delay to Train Details.xlsx'
-
-# backend.process_report(downloaded_file)
+st.set_page_config(
+    page_title="Atlas Q102 report generator",
+    layout="wide",)
 
 with st.form("my_form"): 
    
@@ -27,4 +26,5 @@ if atlas_report is not None:
     
    if len(dates_without_delays) > 0:
        for line in dates_without_delays:
+
         st.write(line) 
