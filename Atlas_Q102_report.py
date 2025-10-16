@@ -18,7 +18,7 @@ if atlas_report is not None:
    
    for  filename in generated_file_names:
         with open(filename, 'rb') as file: 
-            st.download_button(label = filename, 
+            st.download_button(label = f'Download {filename}', 
                         data = file, 
                         file_name = filename, 
                         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
@@ -28,3 +28,4 @@ if atlas_report is not None:
        for line in dates_without_delays:
 
         st.write(line) 
+
