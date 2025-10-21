@@ -29,7 +29,7 @@ def format(file):
 
     # Set word Wrap to Remarks columns
     word_wrap = Alignment(horizontal='left', vertical='top', wrap_text=True)
-    for row in range(2, row_count):
+    for row in range(2, row_count + 1):
         sheet[f'M{row}'].alignment = word_wrap
         sheet[f'Q{row}'].alignment = word_wrap
     
@@ -55,3 +55,4 @@ def format(file):
 
     # Save the modified workbook
     workbook.save(file)
+
